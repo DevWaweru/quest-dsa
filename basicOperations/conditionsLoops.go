@@ -37,4 +37,9 @@ func rangeFor() {
 	for index, element := range strDict {
 		fmt.Println("Country:", index, " City:", element)
 	}
+
+	strNums := []interface{}{1, 2, 3, 4, 5, 6}
+	for _, num := range strNums {
+		fmt.Println(num)
+	}
 }

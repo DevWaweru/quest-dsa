@@ -1,7 +1,7 @@
 package main
 
 import (
-	basicops "challenges/basicOperations"
+	// basicops "challenges/basicOperations"
 	problemsolving "challenges/problemSolving"
 	"fmt"
 )
@@ -10,8 +10,8 @@ func main() {
 	fmt.Println("Hello World")
 	ifState()
 	problemsolving.SlidingWindow()
-	basicops.ArithmeticOps()
-
+	// basicops.ArithmeticOps()
+	problemsolving.LinkedList()
 }
 
 func ifState() {
