@@ -9,7 +9,7 @@ import (
 func main() {
 	fmt.Println("Hello World")
 	ifState()
-	problemsolving.SlidingWindow()
+	problemsolving.SlidingWindows()
 	// basicops.ArithmeticOps()
 	problemsolving.LinkedList()
 }
