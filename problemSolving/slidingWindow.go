@@ -28,9 +28,22 @@ func findSumSliding(arr []int, k int) {
 // 7 [2,3,1,2,4,3] == 2 (4,3)
 // 4 [1,4,4] == 1 (1)
 // 11 [1,1,1,1,1,1,1,1] == 0
-func minimumSubArr(arr []int, target int) {
+// 15 [1,2,3,4,5] == 5
+// 15 [2,14] == 2
+func minimumSubArr(arr []int, target int) int {
 	// assign the largest number to a variable
 	min_val := len(arr)
+	// First check if the sum of the entire array is equal to the target
+	// if yes, return the length of the array
+	var allSum = 0
+	for _, num := range arr {
+		allSum += num
+	}
+	if allSum == target {
+		fmt.Println(min_val)
+		return min_val
+	}
+	// else look for the sub array
 	// know where to start, where to end, and summation
 	var start = 0
 	var end = 0
@@ -50,16 +63,19 @@ func minimumSubArr(arr []int, target int) {
 			}
 		}
 	}
-	if min_val == len(arr) {
+	if min_val == len(arr) && allSum == summ {
 		min_val = 0
 	}
 	fmt.Println(min_val)
+	fmt.Println(summ)
+	fmt.Println(allSum)
+	return (min_val)
 }
 
 func SlidingWindows() {
 	fmt.Println("---- Sliding ----")
 	// This is an example
 	findSumSliding([]int{1, 2, 3, 4, 5, 6}, 3)
-	minimumSubArr([]int{1, 1, 1, 1, 1, 1, 1, 1}, 11)
+	minimumSubArr([]int{1, 4, 4}, 4)
 	fmt.Println("---- -------- ----")
 }
