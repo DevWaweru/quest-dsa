@@ -66,10 +66,7 @@ func minimumSubArr(arr []int, target int) int {
 	if min_val == len(arr) && allSum == summ {
 		min_val = 0
 	}
-	fmt.Println(min_val)
-	fmt.Println(summ)
-	fmt.Println(allSum)
-	return (min_val)
+	return min_val
 }
 
 func SlidingWindows() {

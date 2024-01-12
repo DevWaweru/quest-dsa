@@ -8,10 +8,11 @@ import (
 
 func main() {
 	fmt.Println("Hello World")
-	ifState()
+	// ifState()
 	problemsolving.SlidingWindows()
 	// basicops.ArithmeticOps()
 	problemsolving.LinkedList()
+	problemsolving.TwoPointers()
 }
 
 func ifState() {
