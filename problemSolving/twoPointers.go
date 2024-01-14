@@ -10,23 +10,20 @@ import "fmt"
 // [3,2,4], 6 => [1,2]
 // [3,3], 6 => [0,1]
 func twoSum(arr []int, target int) []int {
-	var start = 0
-	var end = len(arr) - 1
-	for start < end {
-		summ := arr[start] + arr[end]
-		if summ == target {
-			fmt.Println([]int{start, end})
-			return []int{start, end}
-		} else if summ <= target {
-			start += 1
-		} else {
-			end -= 1
+	arrMap := make(map[int]int)
+	fmt.Println(arrMap)
+	for i, num := range arr {
+		diff := target - num
+
+		if index, ok := arrMap[diff]; ok {
+			fmt.Println([]int{index, i})
+			return []int{index, i}
 		}
+		arrMap[num] = i
 	}
-	fmt.Println(arr)
-	return arr
+	return []int{}
 }
 
 func TwoPointers() {
-	twoSum([]int{2, 7, 11, 15}, 9)
+	twoSum([]int{3, 2, 4}, 6)
 }
