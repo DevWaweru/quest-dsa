@@ -13,8 +13,9 @@ func main() {
 	// basicops.ArithmeticOps()
 	problemsolving.LinkedList()
 	problemsolving.TwoPointers()
+	problemsolving.MergeIntervals()
 }
 
-func ifState() {
-	fmt.Println("This is an if statement")
-}
+// func ifState() {
+// 	fmt.Println("This is an if statement")
+// }
